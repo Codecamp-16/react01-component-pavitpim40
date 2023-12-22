@@ -78,16 +78,57 @@ function returnSomething(name) {
 // const add = function (x,y) {
 // 	return x + y
 // }
-const add = (x, y) => x + y;
+// const add = (x, y) => x + y;
 
-const content = <h1>{add(5, 3)}</h1>;
+// const content = <h1>{add(5, 3)}</h1>;
+// root.render(content);
 
-root.render(content);
+// Ternary
+// const content = <h1>{false ? "It's true" : "It's false"}</h1>;
 
+// OR
+// let user = 'John';
+// const content = <h1>{user || 'Guest'}</h1>;
+
+// And
+// let lists = ['HW', 'JW'];
+// const content = <h1>{lists.length > 0 && 'I have a todo list'}</h1>;
+
+// IIFE : Intermediately Invoke Function Express
+// const content = (
+//   <h1>
+//     {(function () {
+//       return 'A';
+//     })()}
+//   </h1>
+// );
+
+// ❌สิ่งที่หาผลลัพธ์ไม่ได้ ไม่ใช่ Expression
+// const content = (
+//   <h1>
+//     {function () {
+//       return 'A';
+//     }}
+//   </h1>
+// );
+
+// root.render(content);
 /**********************************************
- * 4 : Cannot Render null, undefined, true, false, object(Error)
+ * 4 : Cannot Render
+ * - null, undefined, true, false (Not Show),
+ * - object(Error)
+ * - function(Error) == object
  **********************************************/
 
+// let object = {
+//   name: 'John',
+//   age: 20,
+// };
+
+// const content = <h1>{`I'm a ${object.name} Nonlen`}</h1>; // string
+// const content = <h1>{`I'm a ${object}`}</h1>; // string
+
+// root.render(content);
 /**********************************************
  * 5 : JSX Attribute: camelCase (Props)
  * - class -> className
@@ -96,17 +137,57 @@ root.render(content);
  * - onsubmit -> onSubmit
  **********************************************/
 
+// const content = <h1 className='text-red'>Hello</h1>;
+// const content = (
+//   <form onSubmit={() => alert('Submit')}>
+//     <h2 className='text-red'>Select Gender</h2>
+//     <label htmlFor='gender-male'>Male</label>
+//     <input type='radio' id='gender-male' name='gender-form' />
+
+//     <label htmlFor='gender-female'>Female</label>
+//     <input type='radio' id='gender-female' name='gender-form' />
+
+//     <label htmlFor='gender-other'>Other</label>
+//     <input type='radio' id='gender-other' name='gender-form' />
+
+//     <button type='submit'>save</button>
+//     <button type='reset' onClick={() => alert('cancel')}>
+//       cancel
+//     </button>
+//   </form>
+// );
+
+// root.render(content);
+
 /**********************************************
  * 6. Styles Obj (inline-style)
  * using Object for describe style
  * all dash CSS property -> camelCase
- * all value in CSS -> JS Datatype
+ * all value in CSS -> JS Datatype (Number,String)
  **********************************************/
 
+// const content = <h1 style='width:50px; color:red'>Hello</h1>; ❌
+
+const styleObj = {
+  fontSize: '100px',
+  color: 'blue',
+};
+const content = <h1 style={styleObj}>Hello</h1>;
+
+root.render(content);
+
 /**********************************************
- * 7. Fragment
+ * 7. Fragment <> </>
  * 8. CodeComment
  **********************************************/
+
+// Html <!-- -->
+// JS // /* */
+// JSX  {/* */}
+
+{
+  /* <h1 style={styleObj}>Hello</h1> */
+}
 
 /******************************************************************
  * 🚀 CodeCamp Thailand - Relearn Solution Co. 🌐
