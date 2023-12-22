@@ -9,3 +9,11 @@
 - setup react ด้วย CDN
 - เขียน code สำหรับแสดงผลใน html ด้วย react (ชื่อ + นามสกุล + codecamp + รุ่น)
 - decorate with css as you want (optional)
+
+# STEP
+
+- import library สำหรับทำ UI กับ render
+- สร้าง div id root ใน html tag
+- สร้าง ไฟล์ index.js นำไปลิงค์กับ html
+- สร้าง UI โดยใช้ react (Which Function ?)
+- นำ UI ที่สร้างไป render โดย ReactDOM (Which Function ?)
