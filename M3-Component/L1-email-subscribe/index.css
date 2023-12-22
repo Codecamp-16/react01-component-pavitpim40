@@ -1,0 +1,79 @@
+body {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+.app {
+  background: grey;
+  height: 100vh;
+
+  /* flex */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 700px;
+  aspect-ratio: 2/1;
+  background: #5a5a5a;
+  border-radius: 20px;
+  color: white;
+
+  /* flex-container */
+  display: flex;
+}
+
+.card__image {
+  flex: 3.5;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.card__image > img {
+  width: 100%;
+  display: block;
+}
+.card__content {
+  flex: 6.5;
+}
+
+.card__content--title,
+.card__content--form {
+  padding: 50px 50px 20px 50px;
+}
+ {
+  padding: 50px;
+}
+
+.card__content--title > p {
+  margin-top: 20px;
+}
+
+.card__content--input {
+  padding: 7px 0;
+  width: 65%;
+  border-radius: 6px;
+}
+
+.card__content--btn {
+  padding: 7px 14px;
+  margin-left: 10px;
+  border-radius: 6px;
+  background: #6fbf58;
+  color: white;
+
+  border: none;
+}
+/* 
+BEM Methodoly : Block-Elment-Modifier
+Block : card
+Element : image,content
+*/

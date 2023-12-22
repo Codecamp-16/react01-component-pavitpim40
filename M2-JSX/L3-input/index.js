@@ -22,3 +22,14 @@
  * 🌈 Enjoy the coding journey, and remember:
  *    "The more you code, the more you learn!" 🚀🌐
  **********************************************/
+
+// UI : ReactJSX
+const content = (
+  <>
+    <label htmlFor='username'>Username</label>
+    <input className='username' id='username' name='username' />
+  </>
+);
+
+// Render : ReactDOM
+ReactDOM.createRoot(document.getElementById('root')).render(content);

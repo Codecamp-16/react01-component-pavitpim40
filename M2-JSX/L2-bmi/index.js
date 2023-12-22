@@ -17,3 +17,23 @@
  * 🌈 Enjoy the coding journey, and remember:
  *    "The more you code, the more you learn!" 🚀🌐
  **********************************************/
+
+// ####### Calculation (Javascript)
+
+function calcBMI(mass, height) {
+  return mass / height ** 2;
+}
+
+let result = calcBMI(60, 1.75);
+console.log(result.toFixed(2));
+
+//########## Presentation (React, JSX)
+
+// const content = <h3>{result.toFixed(2)}</h3>;
+const content = <h3>{calcBMI(60, 1.75)}</h3>;
+
+//########### Render (ReactDOM)
+const htmlRoot = document.getElementById('root');
+const root = ReactDOM.createRoot(htmlRoot);
+
+root.render(content);
