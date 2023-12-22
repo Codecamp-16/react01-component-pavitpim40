@@ -18,3 +18,22 @@
  **********************************************/
 
 // ReactDOM (Render)
+
+const htmlRoot = document.getElementById('root');
+const root = ReactDOM.createRoot(htmlRoot);
+
+let fullName = 'Pavit Pimchanagul';
+let age = 2023 - 2000;
+
+// const content = (
+// 	<>
+//     <h1>{fullName}</h1>
+//     <p>{age}</p>
+//   </>
+// )
+root.render(
+  <>
+    <h1>{fullName}</h1>
+    <p>{age}</p>
+  </>
+);
